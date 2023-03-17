@@ -11,3 +11,9 @@ const props = defineProps({
 })
 </script>
 
+<style scoped>
+.router-link-active {
+    background-color: rgb(205, 205, 205);
+    color: rgb(41, 41, 41);
+}
+</style>
