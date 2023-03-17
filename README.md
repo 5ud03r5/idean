@@ -1,42 +1,5 @@
-# Nuxt 3 Minimal Starter
+<div align="center"><img src="https://user-images.githubusercontent.com/94323029/225919486-b08bc008-fe57-4aae-a7fc-c58ab0140e49.png"/></div>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## IDEAN is an idea sharing platform 
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Development in progress...
