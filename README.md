@@ -1,5 +1,5 @@
-<div align="center"><img src="https://user-images.githubusercontent.com/94323029/225919486-b08bc008-fe57-4aae-a7fc-c58ab0140e49.png"/></div>
+<div align="center"><img src="https://user-images.githubusercontent.com/94323029/226050373-af8ae3a0-3653-44ca-8042-098e95717b45.png"/></div>
 
-## IDEAN is an idea sharing platform 
+## IDEANS is an idea sharing platform 
 
 Development in progress...
