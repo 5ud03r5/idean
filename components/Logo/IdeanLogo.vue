@@ -1,6 +1,6 @@
 <template>
     <NuxtLink :to="linkTo" class="flex items-center space-x-1 text-[25px] font-bold text-white fill-white">
-        <span>IDEAN</span>
+        <span>IDEANS</span>
         <IconsLogo></IconsLogo>
     </NuxtLink>
 </template>
