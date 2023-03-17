@@ -3,7 +3,7 @@
         <nav class="bg-gray-800 fixed top-0 w-full">
             <div class="flex  container  mx-auto px-10 py-3">
                 <div class="flex space-x-10">
-                    <LogoIdeanLogo></LogoIdeanLogo>
+                    <LogoIdeanLogo :linkTo="'/'"></LogoIdeanLogo>
 
                 </div>
                 <div class="ml-auto flex space-x-10">

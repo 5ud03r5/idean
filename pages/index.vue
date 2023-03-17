@@ -17,7 +17,7 @@
         </div>
         <div class="bg-purple-800">
             <div class="container mx-auto text-center py-4 items-center flex justify-center space-x-10">
-                <UIUniversalLink href="https://github.com"><span>Github</span>
+                <UIUniversalLink href="https://github.com/5ud03r5/idean"><span>Github</span>
                     <IconsGithub height="22" width="22"></IconsGithub>
                 </UIUniversalLink>
 
