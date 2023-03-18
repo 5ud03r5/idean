@@ -1,10 +1,13 @@
 <template>
     <div class="fixed left-0 top-0 h-full md:w-[250px] bg-gray-800 px-1 shadow-xl">
-
-        <div class="flex flex-col mt-2">
+        <div class="px-2">
             <UISidebarItem :linkTo="'/'">
                 <IconsLogo class="w-8 h-8 fill-gray-100"></IconsLogo>
             </UISidebarItem>
+        </div>
+        <hr>
+        <div class="flex flex-col mt-5">
+
             <UISidebarItem :linkTo="'/app/ideas'">
                 <IconsIdeas class="w-8 h-8 fill-gray-100"></IconsIdeas>
             </UISidebarItem>
