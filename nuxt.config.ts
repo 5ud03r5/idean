@@ -4,4 +4,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "./assets/css/tailwind.css",
   },
+  runtimeConfig: {
+    public: {
+      REDIRECT_URL: process.env.REDIRECT_URL,
+    },
+  },
 });
