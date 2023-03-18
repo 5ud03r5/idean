@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col my-10 mr-10 ml-72">
+    <div class="flex flex-col my-10 mr-10 md:ml-72 max-md:ml-16">
         <h1 class="md:text-[40px] max-md:text-[30px] font-bold text-center mb-5">Discover ideas</h1>
         <div class="mx-auto">
             <input

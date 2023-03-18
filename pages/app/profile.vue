@@ -1,5 +1,5 @@
 <template>
-    <div class="mr-10 md:my-10 max-md:my-48 md:ml-72 max-md:ml-56">
+    <div class="mr-10 md:my-10 max-md:my-48 md:ml-72 max-md:ml-16">
         <div class="flex justify-center md:space-x-10 max-md:flex-col h-[650px]">
             <ProfileItem class="max-md:hidden" :username="user && user.user_metadata.user_name"
                 :avatar="user && user.user_metadata.avatar_url">

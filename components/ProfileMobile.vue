@@ -1,36 +1,33 @@
 <template>
-    <div class="">
-        <div class="flex w-full p-4 rounded-md shadow-xl ">
-            <div class="flex flex-col items-center w-max">
-                <div class="flex space-x-2">
-                    <img height="40" width="40" :src="avatar" />
-                    <div class="flex flex-col">
-                        <label class="font-semibold ">{{ username }}</label>
-                        <label class="text-[8px]">Developer</label>
-                    </div>
+    <div class="flex w-full p-2 rounded-md shadow-xl ">
+        <div class="flex flex-col w-max">
+            <div class="flex space-x-2">
+                <img height="40" width="40" :src="avatar" />
+                <div class="flex flex-col">
+                    <label class="font-semibold ">{{ username }}</label>
+                    <label class="text-[8px]">Developer</label>
                 </div>
-                <div class="flex flex-wrap mt-3 space-x-2 ">
-                    <Icon name="logos:github-icon" size="15"></Icon>
-                    <Icon name="logos:twitter" size="15"></Icon>
-                    <Icon name="logos:youtube-icon" size="15"></Icon>
-                    <Icon name="logos:linkedin-icon" size="15"></Icon>
+            </div>
+            <div class="flex ml-auto rounded-md">
+                <div class="flex flex-wrap items-center mt-2">
+                    <div class="bg-gray-900 text-gray-100 w-max text-[8px] px-1 m-[1px]">VueJS</div>
+                    <div class="bg-gray-900 text-gray-100 w-max text-[8px] px-1 m-[1px]">NuxtJS</div>
+                    <div class="bg-gray-900 text-gray-100 w-max text-[8px] px-1 m-[1px]">ReactJS</div>
+                    <div class="bg-gray-900 text-gray-100 w-max text-[8px] px-1 m-[1px]">JS</div>
+                    <div class="bg-gray-900 text-gray-100 w-max text-[8px] px-1 m-[1px]">NodeJS</div>
                 </div>
+
 
 
             </div>
-            <div class="flex p-2 ml-auto rounded-md">
-                <div class="flex flex-wrap items-center mt-2">
-                    <div class="bg-gray-900 text-gray-100 w-max text-[12px] px-1 m-[1px]">VueJS</div>
-                    <div class="bg-gray-900 text-gray-100 w-max text-[12px] px-1 m-[1px]">NuxtJS</div>
-                    <div class="bg-gray-900 text-gray-100 w-max text-[12px] px-1 m-[1px]">ReactJS</div>
-                    <div class="bg-gray-900 text-gray-100 w-max text-[12px] px-1 m-[1px]">JS</div>
-                    <div class="bg-gray-900 text-gray-100 w-max text-[12px] px-1 m-[1px]">NodeJS</div>
-                </div>
-
-
-
+            <div class="flex flex-wrap mt-3 space-x-1">
+                <Icon name="logos:github-icon" size="15"></Icon>
+                <Icon name="logos:twitter" size="15"></Icon>
+                <Icon name="logos:youtube-icon" size="15"></Icon>
+                <Icon name="logos:linkedin-icon" size="15"></Icon>
             </div>
         </div>
+
     </div>
 </template>
 
