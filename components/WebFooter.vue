@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <div class="mb-auto bg-purple-900">
-            <div class="container flex mx-auto max-md:flex-col md:p-10 max-md:p-5 ">
+        <div class="mb-auto bg-purple-900 ">
+            <div class="container flex w-full mx-auto max-md:flex-col md:p-10 max-md:p-5 ">
                 <div class="mr-auto">
                     <LogoIdeanLogo />
                     <p class="text-gray-200 md:text-[20px]">Open source idea sharing platform</p>
