@@ -7,19 +7,13 @@
         </div>
         <div class="w-1/3 ml-auto">
             <form @submit.prevent="submitForm" class="flex flex-col space-y-1">
-                <label :class="!nameValid && 'text-red-500'">Name <span v-if="!nameValid">cannot be empty.</span></label>
-                <input
-                    :class="!nameValid ? 'outline-2 outline outline-red-500 focus:outline-red-500' : 'focus:outline-none'"
-                    v-model="name" @blur="nameValidation" placeholder="Enter your name..."
-                    class="p-2 bg-purple-100 rounded-sm placeholder:italic " />
-                <label :class="!emailValid && 'text-red-500'">Email <span v-if="!emailValid">needs to be
-                        valid.</span></label>
-                <input v-model="email"
-                    :class="!emailValid ? 'outline-2 outline outline-red-500 focus:outline-red-500' : 'focus:outline-none'"
-                    @blur="emailValidation" placeholder="Enter your name..."
-                    class="p-2 bg-purple-100 rounded-sm placeholder:italic" />
-                <label :class="!messageValid && 'text-red-500'">Message <span v-if="!messageValid">cannot be
-                        empty.</span></label>
+                <UIUniversalLabel :valid="nameValid" :name="'Name'" :text="'cannot be empty'" />
+                <UIUniversalInput :name="'Name'" :modelValue="name" @update:modelValue="newValue => name = newValue"
+                    :valid="nameValid" :validation="nameValidation" />
+                <UIUniversalLabel :valid="emailValid" :name="'Email'" :text="'is not valid.'" />
+                <UIUniversalInput :name="'Email'" :modelValue="email" @update:modelValue="newValue => email = newValue"
+                    :valid="emailValid" :validation="emailValidation" />
+                <UIUniversalLabel :valid="messageValid" :name="'Message'" :text="'cannot be empty.'" />
                 <textarea v-model="message"
                     :class="!messageValid ? 'outline-2 outline outline-red-500 focus:outline-red-500' : 'focus:outline-none'"
                     @blur="messageValidation" placeholder="Write something..." rows="6"

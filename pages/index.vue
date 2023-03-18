@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-purple-100 mt-10">
-        <div class="container mx-auto py-20">
+    <div class="mt-10 bg-purple-100">
+        <div class="container py-20 mx-auto">
             <div class="text-center w-[500px] mx-auto ">
                 <h1 class="text-[40px] font-bold">About a project</h1>
                 <p class="text-[25px]">Share your thoughts, expose your ideas and start turning them
@@ -16,7 +16,7 @@
 
         </div>
         <div class="bg-purple-800">
-            <div class="container mx-auto text-center py-4 items-center flex justify-center space-x-10">
+            <div class="container flex items-center justify-center py-4 mx-auto space-x-10 text-center">
                 <UIUniversalLink href="https://github.com/5ud03r5/idean"><span>Github</span>
                     <IconsGithub height="22" width="22"></IconsGithub>
                 </UIUniversalLink>

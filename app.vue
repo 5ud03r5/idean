@@ -3,4 +3,3 @@
     <NuxtPage></NuxtPage>
   </NuxtLayout>
 </template>
-  
