@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed left-0 top-0 h-full w-[250px] bg-gray-800 px-3 shadow-xl">
+    <div class="fixed left-0 top-0 h-full md:w-[250px] bg-gray-800 px-3 shadow-xl">
         <div class="">
             <LogoIdeanLogo :linkTo="'/app/ideas'" class="p-2 text-gray-300 fill-gray-300" />
         </div>

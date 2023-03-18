@@ -1,8 +1,8 @@
 <template>
     <div class="flex flex-col w-[300px] mt-8">
-        <div class=" shadow-xlp-4 w-[250px] rounded-md">
+        <div class=" shadow-xl p-4 w-[250px] rounded-md">
             <div class="bg-gray-200 rounded-full w-max">
-                <img height="250" width="250" :src="avatar" />
+                <img height="220" width="220" :src="avatar" />
             </div>
             <div class="flex flex-col  w-[220px] mt-5 p-2 rounded-md items-center">
                 <label class="text-[24px] font-semibold">{{ username }}</label>
