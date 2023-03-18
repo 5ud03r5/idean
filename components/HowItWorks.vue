@@ -6,8 +6,8 @@
             </div>
 
             <div class="md:w-1/3 md:ml-auto md:text-end max-md:text-center">
-                <h2 class="text-[45px] font-bold">How it works?</h2>
-                <p class="text-[20px]">Become the idea provider or developer or both, share your idea, find developers
+                <h2 class="md:text-[45px] max-md:text-[30px] font-bold">How it works?</h2>
+                <p class="md:text-[20px]">Become the idea provider or developer or both, share your idea, find developers
                     to work on it and
                     watch
                     how your

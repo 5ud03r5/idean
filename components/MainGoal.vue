@@ -5,8 +5,8 @@
                 <IconsCollaborate class="md:h-[300px] md:w-[300px] max-md:w-32 max-md:h-32"></IconsCollaborate>
             </div>
             <div class="md:w-1/3 max-md:text-center">
-                <h2 class="text-[45px]  font-bold">Main goal</h2>
-                <p class="text-[20px]">Our mission is to build a platform where idea provider and developer collaborate
+                <h2 class="md:text-[45px] max-md:text-[30px] font-bold">Main goal</h2>
+                <p class="md:text-[20px]">Our mission is to build a platform where idea provider and developer collaborate
                     to create a product
                     from
                     scratch.</p>
