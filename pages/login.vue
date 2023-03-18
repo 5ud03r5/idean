@@ -3,7 +3,7 @@
         <div class="flex flex-col items-center justify-center p-10 mx-auto mb-10 bg-white shadow-xl rounded-xl w-max">
             <IconsLogo class="w-32 h-32 p-2 bg-purple-200 rounded-full"></IconsLogo>
             <h1 class="text-[35px] font-bold mb-t">Login</h1>
-
+            <h2>Currently only github login is supported</h2>
             <form class="flex flex-col w-[400px] mt-6 space-y-3">
                 <div class="flex flex-col">
                     <UIUniversalLabel :name="'Login'" :text="'cannot be empty.'" :valid="loginValid" />
