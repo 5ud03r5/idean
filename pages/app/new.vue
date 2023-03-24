@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col my-20 mr-10 md:ml-72 max-md:ml-16">
+    <div class="flex flex-col my-20 mr-10 lg:ml-72 max-lg:ml-16">
         <div class="p-5 mx-auto bg-white rounded-md shadow-xl w-max h-max">
             <label
                 class="container flex items-center justify-center mx-auto mb-5 text-center text-[25px] font-semibold">Create

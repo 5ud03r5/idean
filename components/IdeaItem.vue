@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full p-2 text-gray-900 bg-gray-100 rounded-md shadow-lg h-max">
+    <div class="p-2 text-gray-900 bg-gray-100 rounded-md shadow-lg h-max">
         <div class="flex ">
             <h1 class="text-[20px] font-semibold truncate">{{ title }}</h1>
 

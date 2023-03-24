@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-col my-10 mr-10 md:ml-72 max-md:ml-16">
+    <div class="flex flex-col my-10 mr-10 lg:ml-72 max-lg:ml-16">
 
 
 
 
-        <p class="md:text-[40px] max-md:text-[30px] max-sm:text-[25px] font-bold text-center mb-5">Discover ideas</p>
+        <p class="lg:text-[40px] max-lg:text-[30px] max-sm:text-[25px] font-bold text-center mb-5">Discover ideas</p>
         <div class="mx-auto">
             <input
                 class="bg-gray-100 shadow-md py-1 px-2 md:w-[400px] outline outline-1 outline-gray-200 transition-all rounded-lg focus:outline-none "

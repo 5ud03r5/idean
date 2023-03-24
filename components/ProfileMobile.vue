@@ -1,6 +1,6 @@
 <template>
     <div class="fixed top-0 flex w-full p-2 bg-gray-100 shadow-xl">
-        <div class="flex items-center mx-auto text-center max-sm:justify-center sm:space-x-2 max-sm:flex-col w-max">
+        <div class="flex items-center mx-auto space-x-2 text-center max-lg:justify-center max-sm:flex-col w-max">
             <div class="flex items-center space-x-2">
                 <img height="40" width="40" :src="avatar" />
                 <div class="flex flex-col">

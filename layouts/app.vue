@@ -1,5 +1,5 @@
 <template>
-    <AppSidebar class="max-md:hidden"></AppSidebar>
-    <MobileSidebar class="md:hidden" />
+    <AppSidebar class="max-lg:hidden"></AppSidebar>
+    <MobileSidebar class="lg:hidden" />
     <slot></slot>
 </template>
