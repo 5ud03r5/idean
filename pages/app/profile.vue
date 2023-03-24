@@ -8,7 +8,7 @@
                 :bio="user && user.bio">
             </ProfileMobile>
 
-            <div class=" space-y-2 lg:w-2/3 max-md:pt-10 max-sm:pt-24 lg:h-[670px] max-lg:ml-16">
+            <div class=" space-y-2 lg:w-2/3 max-lg:pt-10 max-sm:pt-24 lg:h-[670px] max-lg:ml-16">
 
                 <IdeasList :ideas="ideas"></IdeasList>
             </div>
@@ -17,7 +17,6 @@
 </template>
 
 <script setup>
-
 const { data: user } = await useFetch('/api/profile')
 const { data: ideas } = await useFetch('/api/myideas')
 definePageMeta({

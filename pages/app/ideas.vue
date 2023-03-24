@@ -33,7 +33,6 @@ definePageMeta({
 const uri = useState('uri', () => '/api/ideas')
 const scrollPosition = useState('scrollPosition', () => 0)
 const { data: ideas, pending, refresh } = await useLazyAsyncData('ideas', async () => await $fetch(uri.value))
-console.log(ideas)
 const searchRepository = async (value) => {
     uri.value = `/api/ideas?search=${value}`
     refresh('ideas')
