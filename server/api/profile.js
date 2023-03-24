@@ -4,7 +4,7 @@ export default eventHandler(async (event) => {
   const user = await serverSupabaseUser(event);
   const { data } = await client
     .from("profile")
-    .select("*")
+    .select()
     .eq("id", user.id)
     .single();
   return data;
