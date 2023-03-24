@@ -8,10 +8,7 @@
                 <label class="text-[24px] font-semibold">{{ username }}</label>
                 <label class="text-[14px]">Developer</label>
 
-                <label class="mt-2 text-center text-gray-800">Working in IT industry since 2017, currenly
-                    as a
-                    Security
-                    Engineer</label>
+                <p class="mt-2 text-center text-gray-800">{{ bio }}</p>
                 <div class="flex flex-wrap justify-center mt-2">
                     <div class="bg-gray-900 text-gray-100 w-max px-2 m-[1px]">VueJS</div>
                     <div class="bg-gray-900 text-gray-100 w-max px-2 m-[1px]">NuxtJS</div>
@@ -36,6 +33,7 @@
 const props = defineProps({
     username: String,
     avatar: String,
+    bio: String
 })
 
 </script>

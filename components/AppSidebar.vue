@@ -4,7 +4,8 @@
             <LogoIdeanLogo :linkTo="'/app/ideas'" class="p-2 text-gray-300 fill-gray-300" />
         </div>
         <div class="flex flex-col mt-5">
-            <UISidebarItem :linkTo="'/app/ideas'">Ideas List</UISidebarItem>
+            <UISidebarItem :linkTo="'/app/ideas'">Ideas</UISidebarItem>
+            <UISidebarItem :linkTo="'/app/new'">New Idea</UISidebarItem>
             <UISidebarItem :linkTo="'/app/developers'">Developers</UISidebarItem>
             <UISidebarItem :linkTo="'/app/profile'">My Profile</UISidebarItem>
             <div @click="logout"

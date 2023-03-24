@@ -1,22 +1,36 @@
 <template>
-    <div class="bg-gray-100 shadow-lg h-max rounded-md p-2 text-gray-900">
-        <div class="flex">
-            <h1 class="text-[20px] font-semibold">Idea name</h1>
+    <div class="w-full p-2 text-gray-900 bg-gray-100 rounded-md shadow-lg h-max">
+        <div class="flex ">
+            <h1 class="text-[20px] font-semibold truncate">{{ title }}</h1>
 
         </div>
         <div>
-            <Icon name="iconoir:user-crown"></Icon><span class="text-[12px]"> username</span>
+            <Icon name="iconoir:user-crown"></Icon><span class="text-[12px]"> {{ idea_owner }}</span>
         </div>
         <div>
-            <Icon name="material-symbols:supervisor-account"></Icon><span class="text-[12px]">123</span>
+            <Icon name="material-symbols:supervisor-account"></Icon><span class="text-[12px]">{{ workers }}</span>
         </div>
-        <div>
-            <Icon name="logos:github-icon"></Icon><span class="text-[12px]"> Github</span>
-        </div>
+        <a :href="github" target="_blank">
+            <Icon name="logos:github-icon"></Icon><span :class="!github && 'line-through'" class="text-[12px]">
+                Github</span>
+        </a>
 
 
-        <div class="flex justify-end space-x-2 pt-2 px-1">
-            <div class="bg-gray-800 text-gray-100 px-3 py-1 rounded-md hover:cursor-pointer hover:bg-gray-700">LFDev</div>
+        <div class="flex justify-end flex-wrap px-1 pt-2 md:space-x-2 max-md:text-[12px]">
+            <div v-if="lfDev"
+                class="px-3 py-1 text-gray-100 bg-gray-800 rounded-md max-sm:m-1 hover:cursor-pointer hover:bg-gray-700">
+                LFDev</div>
+            <div v-if="lfHelp"
+                class="px-3 py-1 text-gray-100 bg-gray-800 rounded-md max-sm:m-1 hover:cursor-pointer hover:bg-gray-700">
+                LFHelp</div>
+            <div v-if="devStarted"
+                class="px-3 py-1 text-gray-100 bg-gray-800 rounded-md max-sm:m-1 hover:cursor-pointer hover:bg-gray-700">
+                Started</div>
         </div>
     </div>
 </template>
+
+<script setup>
+defineProps(['github', 'workers', 'idea_owner', 'title', 'lfDev', 'lfHelp', 'devStarted'])
+
+</script>

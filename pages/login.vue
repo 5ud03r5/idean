@@ -24,7 +24,7 @@
             <button
                 @click="auth.signInWithOAuth({ provider: 'github', options: { redirectTo: config.public.REDIRECT_URL } })"
                 class="flex justify-center md:w-[400px] px-3 py-2 mt-10 text-gray-100 bg-purple-800 rounded-sm y-2 hover:bg-purple-700">
-                <IconsGithub class="w-6 h-6 fill-gray-100" /> <span class="ml-1"> Login with Github</span>
+                <IconsGithub class="w-6 h-6 fill-gray-100" /> <span class="ml-1"> Continue with Github</span>
             </button>
         </div>
 
