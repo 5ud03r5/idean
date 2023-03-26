@@ -7,8 +7,7 @@
                 placeholder="Search..." />
         </div>
         <div class="flex flex-wrap justify-center">
-            <ProfileItemGroup v-for="profile in profiles" :key="profile.id" :profile="profile">
-            </ProfileItemGroup>
+            <DeveloperItem v-for="profile in profiles" :key="profile.id" :profile="profile" />
         </div>
     </div>
 </template>

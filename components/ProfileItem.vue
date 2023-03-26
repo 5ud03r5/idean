@@ -6,14 +6,9 @@
             </div>
             <div class="flex flex-col  w-[220px] mt-5 p-2 rounded-md items-center">
                 <p v-if="!editingName" class="text-[24px] font-semibold">{{ name }}</p>
-                <input v-else :value="name" @blur="editName" @input="$emit('newname:name', $event.target.value)"
-                    class="py-1 mt-3 px-2 text-[14px] outline-none w-[230px] resize-none rounded-md text-gray-800 bg-gray-200" />
-                <div @click="editingName = true" v-if="!editingName"
-                    class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[12px] hover:bg-gray-200 transition-all outline-gray-900 outline">
-                    <span>edit name </span>
-                    <Icon name="carbon:edit"></Icon>
-                </div>
-
+                <PofileProfileInput v-else :value="name" @blur="editName" :style="{ width: name.length + 1.8 + 'ch' }"
+                    @input="$emit('newname:name', $event.target.value)" />
+                <PofileEditButton @click="editingName = true" v-if="!editingName" :text="'edit name '" />
                 <div class="flex space-x-2">
                     <div :class="developer ? 'bg-gray-200' : ''"
                         class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[14px] hover:bg-gray-200 transition-all outline-gray-900 outline">
@@ -21,77 +16,42 @@
                     <div
                         class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[14px] hover:bg-gray-200 transition-all outline-gray-900 outline">
                         Provider</div>
-
                 </div>
-
                 <form v-if="editingBio">
                     <textarea :value="bio" @blur="editBio"
                         class="py-1 mt-3 px-2 text-[14px] outline-none w-[230px] resize-none rounded-md text-gray-800 bg-gray-200"
                         rows="4"></textarea>
                 </form>
-                <p v-if="!editingBio" class="mt-2 text-center text-gray-800 text-[14px]">{{ bio }}</p>
-                <div @click="editingBio = true" v-if="!editingBio"
-                    class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[12px] hover:bg-gray-200 transition-all outline-gray-900 outline">
-                    <span>edit bio </span>
-                    <Icon name="carbon:edit"></Icon>
-                </div>
+                <p v-if="!editingBio" class="mt-2 break-all text-center text-gray-800 text-[14px]">{{ bio }}</p>
+                <PofileEditButton @click="editingBio = true" v-if="!editingBio" :text="'edit bio '" />
 
                 <div class="flex flex-wrap justify-center mt-2">
-                    <div v-for="skill in skills" :key="skill"
-                        class="bg-gray-900 text-gray-100 w-max pl-2 pr-1 rounded-md justify-center m-[1px]">{{ skill
-                        }}
+                    <PofileSkillTag v-for="skill in skills" :key="skill">
+                        {{ skill }}
                         <Icon size="20" @click="updateSkills(skill)" class="mb-[2px] hover:cursor-pointer"
                             name="ion:md-close-circle-outline" />
-                    </div>
+                    </PofileSkillTag>
                 </div>
-                <div @click="addingSkill = true" v-if="!addingSkill"
-                    class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[12px] hover:bg-gray-200 transition-all outline-gray-900 outline">
-                    <span>add skill </span>
-                    <Icon name="carbon:edit"></Icon>
-                </div>
+                <PofileEditButton @click="addingSkill = true" v-if="!addingSkill" :text="'add skill '" />
                 <input v-else @blur="addSkill"
                     class="py-1 mt-3 px-2 text-[14px] outline-none w-[230px] resize-none rounded-md text-gray-800 bg-gray-200" />
 
-                <div v-if="!editingSocial" class="flex flex-wrap mt-3 space-x-2 ">
-                    <a v-if="github" :href="github" target="_blank">
-                        <Icon name="logos:github-icon" size="25"></Icon>
-                    </a>
-                    <a v-if="twitter" :href="twitter" target="_blank">
-                        <Icon name="logos:twitter" size="25"></Icon>
-                    </a>
-
-                    <a v-if="youtube" :href="youtube" target="_blank">
-                        <Icon name="logos:youtube-icon" size="25"></Icon>
-                    </a>
-
-                    <a v-if="linkedin" :href="linkedin" target="_blank">
-                        <Icon name="logos:linkedin-icon" size="25"></Icon>
-                    </a>
-
-                </div>
+                <PofileSocialLinks v-if="!editingSocial" :github="github" :linkedin="linkedin" :youtube="youtube"
+                    :twitter="twitter" />
                 <div v-else class="flex flex-col mt-3 ">
-                    <input placeholder="Github" :value="github"
-                        :class="!githubValid ? 'outline-red-600 bg-red-100' : ' focus:bg-gray-50 outline-gray-200 hover:outline-none focus:outline-none bg-gray-100'"
-                        class="px-2 py-1 mt-1 rounded-md outline outline-1 " />
-                    <input placeholder="Twitter" :value="twitter" @input="$emit('update:twitter', $event.target.value)"
-                        :class="!twitterValid ? 'outline-red-600 bg-red-100' : 'focus:bg-gray-50 outline-gray-200 hover:outline-none focus:outline-none bg-gray-100'"
-                        class="px-2 py-1 mt-1 rounded-md outline outline-1 " />
-                    <input placeholder="Youtube" :value="youtube" @input="$emit('update:youtube', $event.target.value)"
-                        :class="!youtubeValid ? 'outline-red-600 bg-red-100' : 'focus:bg-gray-50 outline-gray-200 hover:outline-none focus:outline-none bg-gray-100'"
-                        class="px-2 py-1 mt-1 rounded-md outline outline-1 " />
-                    <input placeholder="Linkedin" :value="linkedin" @input="$emit('update:linkedin', $event.target.value)"
-                        :class="!linkedinValid ? 'outline-red-600 bg-red-100' : 'focus:bg-gray-50 outline-gray-200 hover:outline-none focus:outline-none bg-gray-100'"
-                        class="px-2 py-1 mt-1 rounded-md outline outline-1 " />
+                    <PofileInputSocial placeholder="Github" :value="github" :valid="githubValid"
+                        @input="$emit('update:github', $event.target.value)" />
+                    <PofileInputSocial placeholder="Twitter" :value="twitter" :valid="twitterValid"
+                        @input="$emit('update:twitter', $event.target.value)" />
+                    <PofileInputSocial placeholder="Youtube" :value="youtube" :valid="youtubeValid"
+                        @input="$emit('update:youtube', $event.target.value)" />
+                    <PofileInputSocial placeholder="Linkedin" :value="linkedin" :valid="linkedinValid"
+                        @input="$emit('update:linkedin', $event.target.value)" />
                     <div @click="validateLinks"
                         class="px-2 w-max  ml-auto py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[12px] hover:bg-gray-200 transition-all outline-gray-900 outline">
                         done</div>
                 </div>
-                <div @click="editingSocial = true" v-if="!editingSocial"
-                    class="px-2 py-1 mt-2 rounded-md outline-1 hover:cursor-pointer text-[12px] hover:bg-gray-200 transition-all outline-gray-900 outline">
-                    <span>edit social </span>
-                    <Icon name="carbon:edit"></Icon>
-                </div>
-
+                <PofileEditButton @click="editingSocial = true" v-if="!editingSocial" :text="'edit social '" />
             </div>
         </div>
     </div>
@@ -116,8 +76,6 @@ const editingSocial = ref(false)
 const editingName = ref(false)
 const addingSkill = ref(false)
 
-
-const nameValid = ref(true)
 const githubValid = ref(true)
 const twitterValid = ref(true)
 const linkedinValid = ref(true)
@@ -126,8 +84,9 @@ const youtubeValid = ref(true)
 const addSkill = (event) => {
     if (event.target.value.trim().length > 1) {
         emit('update:skills', props.skills.concat([event.target.value]))
-        addingSkill.value = false
+
     }
+    addingSkill.value = false
 
 }
 
