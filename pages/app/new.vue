@@ -6,6 +6,8 @@
                 Idea</label>
             <form class="flex flex-col space-y-3 w-[300px] mx-auto" @submit.prevent="createIdea">
                 <input v-model="title" placeholder="Name" class="px-2 py-1 bg-gray-100 rounded-md outline-none " />
+                <textarea v-model="description" placeholder="Description" rows="10"
+                    class="px-2 py-1 bg-gray-100 rounded-md outline-none resize-none "></textarea>
                 <input v-model="github" placeholder="GitHub link" class="px-2 py-1 bg-gray-100 rounded-md outline-none " />
                 <div class="flex flex-wrap justify-center space-x-1">
                     <div @click="lfDev = !lfDev"
@@ -33,6 +35,7 @@
 <script setup>
 const title = ref('')
 const github = ref('')
+const description = ref('')
 const user = useSupabaseUser()
 const devStarted = ref(false)
 const lfDev = ref(false)
@@ -45,7 +48,7 @@ definePageMeta({
 const createIdea = async () => {
     await $fetch('/api/ideas', {
         method: 'POST',
-        body: { title: title.value, github: github.value, dev_started: devStarted.value, lf_dev: lfDev.value, lf_help: lfHelp.value, idea_owner: user.value.id }
+        body: { title: title.value, description: description.value, github: github.value, dev_started: devStarted.value, lf_dev: lfDev.value, lf_help: lfHelp.value, idea_owner: user.value.id }
     })
     title.value = ''
     github.value = ''

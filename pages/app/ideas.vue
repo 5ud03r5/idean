@@ -14,9 +14,9 @@
         <div class="">
 
             <div class="flex flex-wrap justify-center w-full p-2 overflow-y-auto rounded-md ">
-                <IdeaItem v-for="item in ideas" :key="item.id" class="md:w-[300px] max-md:w-full m-2 " :github="item.github"
-                    :idea_owner="item.idea_owner.name" :title="item.title" :workers="item.workers"
-                    :devStarted="item.dev_started" :lfHelp="item.lf_help" :lfDev="item.lf_dev" />
+                <IdeaItem v-for="item in ideas" :key="item.id" class="md:w-[600px] max-md:w-full m-2 " :github="item.github"
+                    :idea_owner="item.idea_owner.name" :title="item.title" :description="item.description"
+                    :workers="item.workers" :devStarted="item.dev_started" :lfHelp="item.lf_help" :lfDev="item.lf_dev" />
             </div>
         </div>
 

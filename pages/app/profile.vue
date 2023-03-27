@@ -1,7 +1,7 @@
 <template>
     <div class="my-10 mr-10 lg:ml-72 ">
         <div class="flex lg:space-x-10 max-lg:flex-col h-[650px]">
-            <div>
+            <div v-if="!pending">
                 <ProfileItem class="max-lg:hidden" :name="user.name" @update:name="updateName"
                     @newname:name="newValue => user.name = newValue" :skills="user.skills" @update:skills="updateSkills"
                     :avatar="user && user.avatar_url" :bio="user.bio" @update:bio="updateBio" :youtube="user.youtube"
