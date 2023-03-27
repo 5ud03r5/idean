@@ -9,7 +9,7 @@ export default eventHandler(async (event) => {
       .like("title", `%${search}%`);
     return data;
   }
-  const { data } = await client.from("ideas").select(`*, idea_owner(name)`);
+  const { data } = await client.from("ideas").select(`*, idea_owner(name, id)`);
 
   return data;
 });

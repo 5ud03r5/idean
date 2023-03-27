@@ -13,9 +13,10 @@
 
         <div class="">
 
-            <div class="flex flex-wrap justify-center w-full p-2 overflow-y-auto rounded-md ">
+            <div class="flex flex-wrap justify-center w-full p-2 overflow-x-hidden overflow-y-auto rounded-md ">
                 <IdeaItem v-for="item in ideas" :key="item.id" class="md:w-[600px] max-md:w-full m-2 " :github="item.github"
-                    :idea_owner="item.idea_owner.name" :title="item.title" :description="item.description"
+                    @update:github="newValue => item.github = newValue" :idea_owner_id="item.idea_owner.id"
+                    :idea_owner_name="item.idea_owner.name" :title="item.title" :description="item.description"
                     :workers="item.workers" :devStarted="item.dev_started" :lfHelp="item.lf_help" :lfDev="item.lf_dev" />
             </div>
         </div>
