@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col w-[300px] mt-8">
-        <div class=" shadow-xl p-4 w-[250px] rounded-md">
+    <div class="flex flex-col w-[300px] mt-8 ">
+        <div class=" shadow-xl p-4 w-[250px] rounded-md ">
             <div class="bg-gray-200 rounded-full w-max">
                 <img height="220" width="220" :src="avatar" />
             </div>
@@ -156,3 +156,23 @@ const validateLinks = () => {
 
 
 </script>
+
+<style scoped>
+.profile {
+    opacity: 0;
+    animation: enter 0.3s forwards
+}
+
+@keyframes enter {
+    from {
+        opacity: 0;
+        filter: blur(1em)
+    }
+
+    to {
+        opacity: 1
+    }
+
+
+}
+</style>
