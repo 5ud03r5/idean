@@ -1,6 +1,6 @@
 <template>
     <div class="my-10 mr-10 lg:ml-72 ">
-        <div class="flex lg:space-x-10 max-lg:flex-col h-[650px]">
+        <div class="max-lg:flex max-lg:flex-col h-[650px]">
             <div v-if="!pending">
                 <ProfileItem class="max-lg:hidden" :name="user.name" @update:name="updateName"
                     @newname:name="newValue => user.name = newValue" :skills="user.skills" @update:skills="updateSkills"
@@ -15,7 +15,7 @@
                     :bio="user && user.bio">
                 </ProfileMobile>
             </div>
-            <div class=" space-y-2 lg:w-2/3 max-lg:pt-10 max-sm:pt-24 lg:h-[670px] max-lg:ml-16">
+            <div class="space-y-2 lg:w-1/2 max-lg:pt-10 max-sm:pt-24 lg:h-[670px] max-lg:ml-16 lg:ml-72">
                 <IdeasList></IdeasList>
             </div>
         </div>

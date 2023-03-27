@@ -14,5 +14,6 @@ export default eventHandler(async (event) => {
     .from("ideas")
     .select()
     .eq("idea_owner", user.id);
+
   return data;
 });
