@@ -1,5 +1,5 @@
 <template>
-    <div class="p-5 max-sm:ml-10 bg-gray-100 rounded-md shadow-xl w-[390px] max-sm:w-[200px] h-max m-2">
+    <div class="p-5 max-sm:ml-10 bg-gray-100 rounded-md shadow-xl w-[390px] max-sm:w-full h-max m-2">
         <div class="flex space-x-4">
             <div>
                 <img height="50" width="50" :src="profile.avatar_url" class="" />
