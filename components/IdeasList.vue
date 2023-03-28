@@ -1,8 +1,9 @@
 <template>
     <div v-if="!pending" class="p-4 space-y-2 overflow-y-auto rounded-md ">
         <IdeaItem v-for="idea, index in ideas" :key="idea.id" :github="idea.github" :workers="idea.workers"
-            @update:github="editIdea($event, idea, index)" :idea_owner_id="idea.idea_owner" :title="idea.title"
-            :devStarted="idea.dev_started" :lfHelp="idea.lf_help" :lfDev="idea.lf_dev" class="lg:w-full" />
+            :description="idea.description" @update:github="editIdea($event, idea, index)" :idea_owner_id="idea.idea_owner"
+            :title="idea.title" :devStarted="idea.dev_started" :lfHelp="idea.lf_help" :lfDev="idea.lf_dev"
+            class="lg:w-full" />
     </div>
 </template>
 <script setup>
