@@ -5,11 +5,16 @@ export default eventHandler(async (event) => {
   if (search) {
     const { data } = await client
       .from("ideas")
-      .select()
-      .like("title", `%${search}%`);
+      .select(`*, idea_owner(name, id)`)
+      .ilike("title", `%${search}%`)
+      .order("created_at", { ascending: false });
     return data;
   }
-  const { data } = await client.from("ideas").select(`*, idea_owner(name, id)`);
+
+  const { data } = await client
+    .from("ideas")
+    .select(`*, idea_owner(name, id)`)
+    .order("created_at", { ascending: false });
 
   return data;
 });

@@ -33,8 +33,11 @@
                     </PofileSkillTag>
                 </div>
                 <PofileEditButton @click="addingSkill = true" v-if="!addingSkill" :text="'add skill '" />
-                <input v-else @blur="addSkill"
-                    class="py-1 mt-3 px-2 text-[14px] outline-none w-[230px] resize-none rounded-md text-gray-800 bg-gray-200" />
+                <form @submit.prevent="addSkill">
+                    <input v-if="addingSkill" @blur="addSkill" v-model="skill"
+                        class="py-1 mt-3 px-2 text-[14px] outline-none w-[230px] resize-none rounded-md text-gray-800 bg-gray-200" />
+
+                </form>
 
                 <PofileSocialLinks v-if="!editingSocial" :github="github" :linkedin="linkedin" :youtube="youtube"
                     :twitter="twitter" />
@@ -75,22 +78,23 @@ const editingBio = ref(false)
 const editingSocial = ref(false)
 const editingName = ref(false)
 const addingSkill = ref(false)
-
+const skill = ref('')
 const githubValid = ref(true)
 const twitterValid = ref(true)
 const linkedinValid = ref(true)
 const youtubeValid = ref(true)
 
-const addSkill = (event) => {
-    if (event.target.value.trim().length > 1) {
+const addSkill = () => {
+    if (skill.value.trim().length > 1) {
 
         if (props.skills === null) {
-            emit('update:skills', [event.target.value])
+            emit('update:skills', [skill.value])
         } else {
-            emit('update:skills', props.skills.concat([event.target.value]))
+            emit('update:skills', props.skills.concat([skill.value]))
         }
     }
     addingSkill.value = false
+    skill.value = ''
 
 }
 
