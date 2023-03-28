@@ -64,5 +64,7 @@ const updateSkills = async (value) => {
 }
 
 
+
+
 </script>
 

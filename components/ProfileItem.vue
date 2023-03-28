@@ -83,8 +83,12 @@ const youtubeValid = ref(true)
 
 const addSkill = (event) => {
     if (event.target.value.trim().length > 1) {
-        emit('update:skills', props.skills.concat([event.target.value]))
 
+        if (props.skills === null) {
+            emit('update:skills', [event.target.value])
+        } else {
+            emit('update:skills', props.skills.concat([event.target.value]))
+        }
     }
     addingSkill.value = false
 

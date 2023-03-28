@@ -55,6 +55,7 @@ const createIdea = async () => {
     lfDev.value = false
     lfHelp.value = false
     devStarted.value = false
+    description.value = ''
 
 }
 
