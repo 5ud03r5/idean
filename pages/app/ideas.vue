@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col my-10 mr-10 lg:ml-72 max-lg:ml-16">
+    <div class="flex flex-col my-10 lg:ml-72 max-lg:ml-16">
 
 
 
@@ -14,16 +14,15 @@
 
         </div>
 
-        <div class="">
 
-            <div v-if="!pending"
-                class="flex flex-wrap justify-center w-full p-2 overflow-x-hidden overflow-y-auto rounded-md ">
-                <IdeaItem v-for="item, index in ideas" :key="item.id" class="md:w-[600px] max-md:w-full m-2 "
-                    :github="item.github" @update:github="editIdea($event, item, index)" :idea_owner_id="item.idea_owner.id"
-                    :idea_owner_name="item.idea_owner.name" :title="item.title" :description="item.description"
-                    :workers="item.workers" :devStarted="item.dev_started" :lfHelp="item.lf_help" :lfDev="item.lf_dev" />
-            </div>
+
+        <div v-if="!pending" class="flex flex-wrap justify-center w-full p-2 overflow-x-hidden overflow-y-auto rounded-md ">
+            <IdeaItem v-for="item, index in ideas" :key="item.id" class="md:w-[600px] max-md:w-full m-2 "
+                :github="item.github" @update:github="editIdea($event, item, index)" :idea_owner_id="item.idea_owner.id"
+                :idea_owner_name="item.idea_owner.name" :title="item.title" :description="item.description"
+                :workers="item.workers" :devStarted="item.dev_started" :lfHelp="item.lf_help" :lfDev="item.lf_dev" />
         </div>
+
 
 
 
